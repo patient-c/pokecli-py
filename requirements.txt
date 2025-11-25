@@ -1,0 +1,11 @@
+art==6.5
+certifi==2025.10.5
+charset-normalizer==3.4.4
+colorama==0.4.6
+idna==3.11
+keyboard==0.13.5
+pillow==10.4.0
+pokebase==1.4.1
+requests==2.32.5
+term-image==0.7.2
+urllib3==2.5.0
