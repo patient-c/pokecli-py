@@ -71,9 +71,9 @@ def buscar_pokemon():
         elif opcion_pokemon == 4:
             tipo_pokemon = pokemon.types
             if len(tipo_pokemon) == 2: # Si el pokemon tiene dos tipos
-                type1 = tipo_pokemon[0]
-                type2 = tipo_pokemon[1]
-                print(f'\n{GREEN}{(pokemon.name).capitalize()}{RESET} es tipo {YELLOW}{(type1.type.name).capitalize()}{RESET} y {YELLOW}{(type2.type.name).capitalize()}{RESET}')
+                #type1 = tipo_pokemon[0]
+                #type2 = tipo_pokemon[1]
+                print(f'\n{GREEN}{(pokemon.name).capitalize()}{RESET} es tipo {YELLOW}{(tipo_pokemon[0]).type.name}{RESET} y {YELLOW}{(tipo_pokemon[1]).type.name}{RESET}')
             elif len(tipo_pokemon) == 1: # Si el pokemon tiene un solo tipo
                 type1 = tipo_pokemon[0]
                 print(f'\n{GREEN}{(pokemon.name).capitalize()}{RESET} es tipo {YELLOW}{(type1.type.name).capitalize()}{RESET}')
