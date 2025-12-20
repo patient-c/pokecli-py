@@ -71,12 +71,9 @@ def buscar_pokemon():
         elif opcion_pokemon == 4:
             tipo_pokemon = pokemon.types
             if len(tipo_pokemon) == 2: # Si el pokemon tiene dos tipos
-                #type1 = tipo_pokemon[0]
-                #type2 = tipo_pokemon[1]
-                print(f'\n{GREEN}{(pokemon.name).capitalize()}{RESET} es tipo {YELLOW}{(tipo_pokemon[0]).type.name}{RESET} y {YELLOW}{(tipo_pokemon[1]).type.name}{RESET}')
+                print(f'\n{GREEN}{(pokemon.name).capitalize()}{RESET} es tipo {YELLOW}{((tipo_pokemon[0]).type.name).capitalize()}{RESET} y {YELLOW}{((tipo_pokemon[1]).type.name).capitalize()}{RESET}')
             elif len(tipo_pokemon) == 1: # Si el pokemon tiene un solo tipo
-                type1 = tipo_pokemon[0]
-                print(f'\n{GREEN}{(pokemon.name).capitalize()}{RESET} es tipo {YELLOW}{(type1.type.name).capitalize()}{RESET}')
+                print(f'\n{GREEN}{(pokemon.name).capitalize()}{RESET} es tipo {YELLOW}{((tipo_pokemon[0]).type.name).capitalize()}{RESET}')
         elif opcion_pokemon == 5:
             estadisticas = [(f'{estadistica.stat.name,estadistica.base_stat}'.replace('\'',"").replace(',',':').strip('()').capitalize()) for estadistica in pokemon.stats]          
             print(f'\n{GREEN}Estadisticas de {RESET}{YELLOW}{(pokemon.name).capitalize()}{RESET}{GREEN}:{RESET}\n{'\n'.join(estadisticas).replace("-"," ")}')
@@ -90,15 +87,12 @@ def listar_tipos():
      print(f'\nTipos de Pokemon:\n{'\n'.join(lista_tipos)}')
 
 def buscar_movimientos():
-
     opcion_movimientos = None
-        
     while opcion_movimientos != 3:
         print(f'''{GREEN}\nElige una opcion de busqueda:{RESET}\n
 1. Buscar por nombre
 2. Listar movimientos por tipo
 3. Salir al menu principal''')
-        
         while True:
             try:
                 opcion_movimientos = int(input(f'\n{GREEN}Ingrese una opcion: {RESET}'))
@@ -107,7 +101,6 @@ def buscar_movimientos():
                 print(f'\nNo es una opcion valida, favor seleccione los valores del 1-3 !!!')
                 buscar_movimientos()
 
-        
         if opcion_movimientos == 1: # Buscar por nombre
             
             input_movimiento = (input(f'{GREEN}\nIngresa el nombre del movimiento: {RESET}')).lower().replace(' ','-') # Ingresa el nombre del movimiento y se coloca todo a minusculas
